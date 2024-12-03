@@ -36,20 +36,6 @@ const achievements = [
 const timelineData = [
   {
     number: 1,
-    title: 'Ytmdl',
-    description: 'Web App to download songs with metadata included in the highest quality possible. Backend used ytmdl CLI.',
-    techStack: '{ Python, Vue }',
-    views: '219.32k',
-  },
-  {
-    number: 2,
-    title: 'ytmdl',
-    description: 'App to download songs with metadata included from sources like iTunes, Musicbrainz, LastFM, etc.',
-    techStack: '{ Python }',
-    views: '3.21k',
-  },
-  {
-    number: 3,
     title: 'Jiggler',
     description: 'Developed a web app using Spotify API to analyze music qualities such as Instrumentalness and Liveness, boosting user retention by 30% and daily active users by 20%. Created playlists from user feeds and history with auto-save functionality.',
     techStack: '{ MERN Stack }',
@@ -57,7 +43,7 @@ const timelineData = [
     link: 'https://github.com/mahi0601/Jiggler',
   },
   {
-    number: 4,
+    number: 2,
     title: 'YouTube Downloader',
     description: 'Built a React Web App with a backend API using RegEx for query processing, allowing users to download videos and audio in various formats (mp4, mp3, MOV).',
     techStack: '{ React.js, Express.js, Node.js }',
@@ -65,7 +51,7 @@ const timelineData = [
     link: 'https://github.com/mahi0601/Youtube-Downloader',
   },
   {
-    number: 5,
+    number: 3,
     title: 'Crypto Tracker',
     description: 'Monitored coins, set price alerts, and tracked cryptocurrency news. Used OHLC indicators to generate graphs, stored data using Kubernetes, and identified top patterns for trading analysis.',
     techStack: '{ TA-lib, React.js, yfinance, Kubernetes }',
@@ -73,7 +59,7 @@ const timelineData = [
     link: 'https://github.com/mahi0601/CryptoTracker',
   },
   {
-    number: 6,
+    number: 4,
     title: 'Text Generator',
     description: 'Built a text generation model using Bi-LSTM and LSTM networks in PyTorch with pre-trained large language models for enhanced context understanding. Developed an interactive UI and implemented prompt engineering for optimization.',
     techStack: '{ PyTorch, Python }',
@@ -105,9 +91,8 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        Passionate developer with a knack for building modern, responsive, and robust applications. 
-        Skilled in a variety of frameworks and languages, I strive to deliver solutions that meet 
-        both functional and aesthetic needs.
+        Tech-savvy developer crafting sleek, responsive, and solid apps. Skilled in multiple frameworks and languages,
+        I aim to make things work beautifully.
       </motion.p>
 
       <motion.div className="icon-container" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -126,7 +111,7 @@ const About = () => {
       <section className="achievements-section">
         <div className="achievements-container">
           <div className="achievements-left">
-            <h2 className="achievements-title">Things I achieved while creating and building over the last 5+ years.</h2>
+            <h2 className="achievements-title">Things I achieved while creating and building over the last 3+ years.</h2>
             <button className="achievement-button">CHECK ACHIEVEMENTS</button>
           </div>
           <div className="achievements-right">
@@ -172,7 +157,7 @@ const About = () => {
   <div class="contact-container">
     <div class="contact-left">
       <h2 class="contact-title">Want to work with me on your<br/>next awesome project?</h2>
-      <button class="contact-button">GET IN TOUCH ⇒</button>
+      <button class="contact-button"><a href='mahibhatt2001@gmaail.com'></a>GET IN TOUCH ⇒</button>
     </div>
     <div class="contact-right">
       <p class="contact-description">
