@@ -1,13 +1,221 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container styling for the home section */
+/* Navbar styling - adjust if necessary */
+header {
+  position: fixed; /* Keeps the navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays above content */
+  background-color: #fff; /* Set background color for visibility */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  padding-top: 80px; /* Adjust this to the height of your navbar to prevent overlap */
 }
+
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 1rem;
+  }
+  
+  /* Main title styling */
+  .home-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .home-title span {
+    color: #00b894;
+  }
+  
+  .highlight-yellow {
+    color: #f1c40f;
+  }
+  
+  .highlight-blue {
+    color: #3498db;
+  }
+  
+  .highlight-green {
+    color: #2ecc71;
+  }
+  
+  /* Icon grid for scattered layout */
+  .icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows by default */
+    gap: 1.5rem;
+    pointer-events: none;
+    padding: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .icon-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .icon-container {
+      grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+    }
+  }
+  
+  /* Icon styling */
+  .icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: none; /* Keep original colors */
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .icon-animate {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Footer styling for cookie notice */
+  .cookie-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fef7da;
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .cookie-footer a {
+    color: #3498db;
+    text-decoration: underline;
+  }
+  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    font-size: 0.75rem;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+  }
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  
+  /* Logo and initials styling */
+  .navbar-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
+  .initials {
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+    margin-right: 8px;
+  }
+  
+  /* Link styling */
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-link {
+    color: #333;
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #00b894; /* Hover color similar to the reference image */
+  }
+  
+  /* Optional: Media query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 0 1rem;
+    }
+  
+    .navbar-link {
+      font-size: 0.9rem;
+    }
+  }
+  
