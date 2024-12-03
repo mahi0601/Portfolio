@@ -48,7 +48,40 @@ const timelineData = [
     techStack: '{ Python }',
     views: '3.21k',
   },
+  {
+    number: 3,
+    title: 'Jiggler',
+    description: 'Developed a web app using Spotify API to analyze music qualities such as Instrumentalness and Liveness, boosting user retention by 30% and daily active users by 20%. Created playlists from user feeds and history with auto-save functionality.',
+    techStack: '{ MERN Stack }',
+    views: 'Unknown',
+    link: 'https://github.com/mahi0601/Jiggler',
+  },
+  {
+    number: 4,
+    title: 'YouTube Downloader',
+    description: 'Built a React Web App with a backend API using RegEx for query processing, allowing users to download videos and audio in various formats (mp4, mp3, MOV).',
+    techStack: '{ React.js, Express.js, Node.js }',
+    views: 'Unknown',
+    link: 'https://github.com/mahi0601/Youtube-Downloader',
+  },
+  {
+    number: 5,
+    title: 'Crypto Tracker',
+    description: 'Monitored coins, set price alerts, and tracked cryptocurrency news. Used OHLC indicators to generate graphs, stored data using Kubernetes, and identified top patterns for trading analysis.',
+    techStack: '{ TA-lib, React.js, yfinance, Kubernetes }',
+    views: 'Unknown',
+    link: 'https://github.com/mahi0601/CryptoTracker',
+  },
+  {
+    number: 6,
+    title: 'Text Generator',
+    description: 'Built a text generation model using Bi-LSTM and LSTM networks in PyTorch with pre-trained large language models for enhanced context understanding. Developed an interactive UI and implemented prompt engineering for optimization.',
+    techStack: '{ PyTorch, Python }',
+    views: 'Unknown',
+    link: 'https://github.com/mahi0601/TextGen/tree/main',
+  },
 ];
+
 
 const About = () => {
   return (
@@ -121,7 +154,7 @@ const About = () => {
           <p className="timeline-views">
             <span className="icon-views">📄</span> {item.views}
           </p>
-          <a href="#" className="check-button">
+          <a href="https://github.com/mahi0601" className="check-button">
             CHECK <span className="arrow">⇒</span>
           </a>
         </div>
@@ -146,7 +179,7 @@ const About = () => {
         I am always excited to work on something new. Be it a shiny new web app or a blazing fast API. Although I do lean towards backend mostly, I also love building command-line tools and anything Linux.
       </p>
       <div class="contact-info">
-        <p>👤 Over 8 years of industry experience</p>
+        <p>👤 Over 3 years of industry experience</p>
         <p>🕒 Always a part of the team</p>
       </div>
     </div>
