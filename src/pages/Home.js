@@ -11,6 +11,7 @@ import javascriptLogo from '../assets/javascript.svg';
 import kerasLogo from '../assets/keras.svg';
 import kubernetesLogo from '../assets/kubernetes.svg';
 import nodejsLogo from '../assets/nodedotjs.svg';
+import { useNavigate } from 'react-router-dom';
 
 const icons = [
   { src: angularLogo, alt: 'Angular', style: { top: '20%', left: '25%' } },
@@ -40,6 +41,8 @@ const iconVariants = {
 
 const Home = () => {
   const [cookieConsent, setCookieConsent] = useState(false);
+    const navigate = useNavigate
+    ();
 
   // Check for cookie consent in local storage on load
   useEffect(() => {
@@ -108,6 +111,7 @@ const Home = () => {
       {/* Buttons in one row */}
       <motion.div className="flex space-x-4 mt-10 z-10 relative">
         <motion.button
+          onClick={() => navigate('/projects')}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="px-8 py-3 text-white bg-green-500 rounded-lg shadow-lg hover:bg-green-600"
