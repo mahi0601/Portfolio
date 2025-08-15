@@ -41,8 +41,7 @@ const iconVariants = {
 
 const Home = () => {
   const [cookieConsent, setCookieConsent] = useState(false);
-    const navigate = useNavigate
-    ();
+    const navigate = useNavigate();
 
   // Check for cookie consent in local storage on load
   useEffect(() => {
